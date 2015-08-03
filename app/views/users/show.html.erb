@@ -1,4 +1,16 @@
-<h1>
-  <%= gravatar_for @user %>
-  <%= @user.name %>
-</h1>
+<h1>Profile</h1>
+
+<div class="Profile">
+  <p class="p_pic">
+    <%= gravatar_for @user %>
+  </p>
+  <p class="p_name">
+    <%= @user.name %>
+  </p>
+  <p class="p_prof">
+    <%=  simple_format(@user.profile) %>
+  </p>
+  
+  <%= link_to "プロフィールの編集", edit_user_path(@user), class: "btn btn-primary" %>
+  
+</div> 
