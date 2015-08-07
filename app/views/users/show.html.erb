@@ -13,6 +13,12 @@
   </p>
   <%= link_to "プロフィールの編集", edit_user_path(@user), class: "btn btn-primary" %>
     </section>
+    
+  <%= link_to "followings", followings_user_path(@user) %>  
+  <br/>
+  <%= link_to "followers", followers_user_path(@user) %> 
+    
+    
   </aside>
   <div class="col-md-8">
     <%= render 'follow_form' if logged_in? %>
@@ -24,7 +30,3 @@
     <% end %>
   </div>
 </div>
-
-
-
-
