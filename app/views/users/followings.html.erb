@@ -2,9 +2,6 @@
 
 <ul>
     <% @followings.each do |user| %>
-           <%= gravatar_for @user %>
-           <%= @user.name %>
-            <br>
-            
+           <li><%= user.name %></li>
     <% end %>
 </ul>
