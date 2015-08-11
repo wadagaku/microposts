@@ -62,10 +62,7 @@ class UsersController < ApplicationController
   end
   
    def set_user
-     if current_user.id == params[:id]
-      @user = current_user
-    else
     @user = User.find(params[:id])
-     end
-   end
+   end   
 end
+
