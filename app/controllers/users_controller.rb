@@ -52,19 +52,12 @@ class UsersController < ApplicationController
                                  :password_confirmation, :profile)
   end
   
-<<<<<<< HEAD
-  def set_user
-      if current_user.id == params[:id]
-        @user = current_user
-      else
-        @user = User.find(params[:id])
-      end
-  end
-end
-=======
+
+  
+
    def set_user
     @user = User.find(params[:id])
    end   
 end
 
->>>>>>> master
+
