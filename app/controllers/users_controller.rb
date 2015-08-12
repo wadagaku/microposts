@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :followings, :followers, :page_entries_info, :paginate]
   def show 
      @user = User.find(params[:id])
-    @microposts = @user.microposts
+    @microposts = @user.microposts.page(params[:page])
   end
   
   def new
@@ -47,7 +47,8 @@ class UsersController < ApplicationController
      
   end
   
-    
+  
+  
 
 
 
